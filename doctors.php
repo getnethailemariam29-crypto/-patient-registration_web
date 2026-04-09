@@ -136,7 +136,7 @@ $doctors = $pdo->query("SELECT * FROM doctors ORDER BY name")->fetchAll();
     <nav>
         <div class="nav-container">
             <ul class="nav-links">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="home.php">index</a></li>
                 <li><a href="register.php">New Patient Registration</a></li>
                 <li class="dropdown">
                     <a href="#"><i class="fas fa-info-circle"></i> About Us</a>

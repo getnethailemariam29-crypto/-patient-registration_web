@@ -179,7 +179,7 @@ require_once 'config.php';
    <nav>
     <div class="nav-container">
         <ul class="nav-links">
-            <li><a href="home.php"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="home.php"><i class="fas fa-home"></i> index</a></li>
             <li><a href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
             <li><a href="appointment.php"><i class="fas fa-calendar-check"></i> Appointments</a></li>
             <li><a href="service.php"><i class="fas fa-medkit"></i> Services</a></li>

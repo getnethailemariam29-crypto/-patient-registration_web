@@ -153,7 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <nav>
         <div class="navbar">
             <ul class="nav-links">
-                <li><a href="home.php"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="home.php"><i class="fas fa-home"></i> index</a></li>
                 <li><a href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
                 <li><a href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
                 <li><a href="doctors.php">Doctors</a></li>
