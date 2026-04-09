@@ -1,0 +1,160 @@
+/* mobile.css - Additional mobile-specific styles */
+
+/* Prevent text scaling on orientation change */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Better touch scrolling */
+.scrollable {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Form elements optimization for mobile */
+@media (max-width: 768px) {
+    select, input, textarea {
+        font-size: 16px !important; /* Prevents zoom on focus */
+    }
+    
+    /* Better spacing for checkboxes and radios */
+    .checkbox-option, .radio-option {
+        padding: 12px;
+        margin: 5px 0;
+    }
+    
+    /* Stack buttons vertically */
+    .doctor-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .doctor-actions a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Improve card spacing */
+    .doctor-card, .service-card {
+        margin-bottom: 15px;
+    }
+    
+    /* Better modal positioning on mobile */
+    .modal {
+        padding: 10px;
+    }
+    
+    /* Improve video call interface on mobile */
+    .control-btn {
+        width: 55px;
+        height: 55px;
+    }
+    
+    /* Better table display on mobile */
+    .appointment-history table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+    }
+}
+
+/* iPhone notch support */
+@supports (padding: max(0px)) {
+    .container {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+    
+    nav {
+        padding-top: max(12px, env(safe-area-inset-top));
+    }
+    
+    footer {
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    
+    .doctor-card, .service-card, .contact-form {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+    
+    input, select, textarea {
+        background-color: #2d2d2d;
+        color: #ffffff;
+        border-color: #404040;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Loading spinner for mobile */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+/* Pull to refresh indicator */
+.pull-to-refresh {
+    text-align: center;
+    padding: 10px;
+    color: #999;
+    font-size: 12px;
+}
+
+/* Better bottom navigation for mobile */
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .mobile-bottom-nav a {
+        flex: 1;
+        text-align: center;
+        padding: 8px;
+        color: var(--dark-color);
+        text-decoration: none;
+        font-size: 12px;
+    }
+    
+    .mobile-bottom-nav a i {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    
+    /* Add padding to body to account for bottom nav */
+    body {
+        padding-bottom: 60px;
+    }
+}
